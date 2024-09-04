@@ -7,7 +7,7 @@ import {
   IconButton,
 } from "@mui/material";
 import ImageEl from "../../components/utils/ImageEl";
-import LogoImg from "../../assets/logo.svg";
+import LogoImg from "../../assets/Navigo.svg";
 import LogoutIcon from "@mui/icons-material/ExitToApp";
 import CreateBoardIcon from "@mui/icons-material/AddCircle";
 import { signOut } from "firebase/auth";
@@ -28,7 +28,7 @@ const Topbar = ({ openModal }) => {
             height: "25px",
           }}
           src={LogoImg}
-          alt="Flowboard"
+          alt="Navigo-Board"
         />
         <Stack direction="row" spacing={2}>
           {isXs ? (

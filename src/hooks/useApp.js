@@ -42,7 +42,7 @@ const useApp = () => {
   };
 
   const updateBoardData = async (boardId, tabs) => {
-    const docRef = doc(db, `users/${uid}/boardsData/${boardId}`);
+    const docRef = doc(db, `users/${uid}/boards/${boardId}`);
     try {
       await updateDoc(docRef, { tabs, lastUpdated: serverTimestamp() });
     } catch (err) {
@@ -52,7 +52,7 @@ const useApp = () => {
   };
 
   const fetchBoard = async (boardId) => {
-    const docRef = doc(db, `users/${uid}/boardsData/${boardId}`);
+    const docRef = doc(db, `users/${uid}/boards/${boardId}`);
     try {
       const doc = await getDoc(docRef);
       if (doc.exists) {
@@ -66,23 +66,33 @@ const useApp = () => {
 
   const createBoard = async ({ name, color }) => {
     try {
-      const doc = await addDoc(boardsColRef, {
+      const boardsColRef = collection(db, `users/${uid}/boards`);
+      const docRef = await addDoc(boardsColRef, {
         name,
         color,
-        createdAt: serverTimestamp(),
+        createdAt: serverTimestamp(),  // Ensures a Firestore Timestamp is used
+        tabs: {
+          todos: [],
+          inProgress: [],
+          completed: []
+        },
+        lastUpdated: serverTimestamp()  // Adds lastUpdated as well
       });
-
+  
       addBoard({
         name,
         color,
-        createdAt: new Date().toLocaleString("en-US"),
-        id: doc.id,
+        createdAt: new Date().toLocaleString("en-US"),  // UI-friendly date format
+        id: docRef.id,
       });
     } catch (err) {
       setToastr("Error creating board");
       throw err;
     }
   };
+  
+  
+  
 
   const fetchBoards = async (setLoading) => {
     try {

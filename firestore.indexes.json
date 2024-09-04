@@ -1,4 +1,12 @@
 {
-  "indexes": [],
+  "indexes": [
+    {
+      "collectionGroup": "boards",
+      "fields": [
+        { "fieldPath": "color", "order": "asc" },
+        { "fieldPath": "createdAt", "order": "desc" }
+      ]
+    }
+  ],
   "fieldOverrides": []
 }

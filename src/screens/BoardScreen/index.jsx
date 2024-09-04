@@ -39,25 +39,58 @@ const BoardScreen = () => {
   const handleFetchBoard = async () => {
     try {
       const boardData = await fetchBoard(boardId);
+      console.log('Fetched boardData:', boardData);  // Log the fetched data
+      
       if (boardData) {
-        const { lastUpdated, tabs } = boardData;
-        setData(tabs);
-        setLastUpdated(lastUpdated.toDate().toLocaleString("en-US"));
+        const { createdAt, tabs } = boardData;
+  
+        // Handle createdAt (check if it's a valid Timestamp)
+        if (createdAt && createdAt.toDate) {
+          setLastUpdated(createdAt.toDate().toLocaleString("en-US"));
+        } else if (typeof createdAt === "string") {
+          console.warn("createdAt is a string, converting it manually");
+          setLastUpdated(createdAt);  // For now, display the string
+        } else {
+          console.warn("createdAt is missing or invalid");
+          setLastUpdated("Unknown");
+        }
+  
+        if (tabs) {
+          setData(tabs);  // Assuming tabs is part of the fetched data
+        } else {
+          console.warn("Tabs data is missing");
+          setData(null);  // No tabs available, so show BoardNotReady
+        }
+      } else {
+        console.warn("Board data is missing");
+        setData(null);  // If no data, show BoardNotReady
       }
+  
       setLoading(false);
     } catch (err) {
-      console.log(err);
+      console.error("Error fetching board:", err);
+      setLoading(false);
     }
   };
+  
+  
+  
+  
 
   useEffect(() => {
+    console.log("areBoardsFetched:", areBoardsFetched);
+  console.log("board:", board);
     if (!areBoardsFetched || !board) navigate("/boards");
     else handleFetchBoard();
   }, []);
 
   if (!board) return null;
   if (loading) return <AppLoader />;
-  if (!data) return <BoardNotReady />;
+  if (!data) {
+    console.log("Board data is not available. Showing BoardNotReady component.");
+    return <BoardNotReady />;
+  }
+  
 
   return (
     <>

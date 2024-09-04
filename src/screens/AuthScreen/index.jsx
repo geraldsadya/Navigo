@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Stack, TextField, Button, Typography } from "@mui/material";
-import LogoImg from "../../assets/logo.svg";
+import LogoImg from "../../assets/Navigo.svg";
 import ImageEl from "../../components/utils/ImageEl";
 import { auth } from "../../firebase";
 import {
@@ -52,7 +52,7 @@ const AuthScreen = () => {
       }}
     >
       <Stack mb={6} spacing={4} alignItems="center" textAlign="center">
-        <ImageEl src={LogoImg} alt="FlowBoard" />
+        <ImageEl src={LogoImg} alt="Navigo-Board" />
         <Typography color="rgba(255,255,255, .6)">
           Visualize Your Workflow for Increased Productivity.
           <br />
