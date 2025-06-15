@@ -3,7 +3,7 @@
 A **sleek and responsive** Single Page Application (SPA) built to help non-profits and small teams **organize tasks visually and in real-time**.  
 Manage your workflow, assign tasks, and track progress — all with drag-and-drop ease.
 
-## 📸 Screenshot
+## 📸 Demo
 
 ![Screen Recording 2025-06-15 at 20 02 01 (1)](https://github.com/user-attachments/assets/b814f646-2c69-486d-bfe4-2ac0d0162661)
 
