@@ -1,8 +1,35 @@
-
 # 🗂️ Navigo Board – Real-Time Kanban Task Manager
 
 A **sleek and responsive** Single Page Application (SPA) built to help non-profits and small teams **organize tasks visually and in real-time**.  
 Manage your workflow, assign tasks, and track progress — all with drag-and-drop ease.
+
+---
+
+## 📸 Screenshots & Demo
+
+### 🖥️ Desktop View
+![Desktop Dashboard](./screenshots/desktop-dashboard.png)
+*Main kanban board with drag-and-drop functionality*
+
+![Task Management](./screenshots/task-management.png)
+*Creating and editing tasks with detailed forms*
+
+### 📱 Mobile Experience
+<div align="center">
+  <img src="./screenshots/mobile-board.png" alt="Mobile Board View" width="300"/>
+  <img src="./screenshots/mobile-task-edit.png" alt="Mobile Task Edit" width="300"/>
+</div>
+*Fully responsive design optimized for mobile devices*
+
+### 🎬 Live Action Demo
+![Drag and Drop Demo](./gifs/drag-drop-demo.gif)
+*Smooth drag-and-drop task movement between columns*
+
+![Real-time Sync](./gifs/realtime-sync.gif)
+*Real-time updates across multiple browser sessions*
+
+![Authentication Flow](./gifs/auth-flow.gif)
+*Secure login and registration process*
 
 ---
 
@@ -75,6 +102,22 @@ npm run dev
 
 ---
 
+## 📱 UI/UX Highlights
+
+### Color Scheme & Design
+![Color Palette](./screenshots/color-palette.png)
+*Carefully chosen colors for accessibility and visual appeal*
+
+### Component Showcase
+![Components Overview](./screenshots/components-showcase.png)
+*Material UI components customized for the kanban workflow*
+
+### Loading States & Animations
+![Loading Demo](./gifs/loading-animations.gif)
+*Smooth loading states and micro-interactions*
+
+---
+
 ## 💡 Future Enhancements
 
 - 📆 Add deadlines + due date reminders  
@@ -94,6 +137,27 @@ npm run dev
 
 ---
 
+## 📁 Project Structure
+
+```
+navigo-board/
+├── screenshots/          # 📸 UI screenshots
+│   ├── desktop-dashboard.png
+│   ├── mobile-board.png
+│   └── task-management.png
+├── gifs/                # 🎬 Demo animations
+│   ├── drag-drop-demo.gif
+│   ├── realtime-sync.gif
+│   └── auth-flow.gif
+├── src/
+│   ├── components/
+│   ├── firebase/
+│   └── styles/
+└── README.md
+```
+
+---
+
 ## 🧑‍💻 Built By
 
 Crafted with precision by [Gerald Sadya](https://github.com/geraldsadya)  
@@ -108,4 +172,4 @@ Crafted with precision by [Gerald Sadya](https://github.com/geraldsadya)
 ---
 
 ⭐ **If this helped you or inspired you, please star the repo and share.**  
-Let’s make productivity feel good.
+Let's make productivity feel good.
