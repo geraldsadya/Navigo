@@ -5,8 +5,9 @@ Manage your workflow, assign tasks, and track progress — all with drag-and-dro
 
 ## 📸 Screenshot
 
-![Navigo Board](![Screenshot 2025-06-15 at 20 00 32](https://github.com/user-attachments/assets/4c512965-4cdc-485e-97fb-eb899277fb8f)
-)
+![Screenshot 2025-06-15 at 20 00 32](https://github.com/user-attachments/assets/4c512965-4cdc-485e-97fb-eb899277fb8f)
+![Screen Recording 2025-06-15 at 20 02 01 (1)](https://github.com/user-attachments/assets/b814f646-2c69-486d-bfe4-2ac0d0162661)
+
 
 ---
 
